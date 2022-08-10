@@ -22,17 +22,22 @@ const ShopContainer = () => {
             section: 'shoes'
         }
         ])
-
+        
         const handleItemSelected = item => {
-            setItem(item)
-            console.log();
+            setItem(item);
+        }
+        
+        const addItemToBasket = item => {
+            let copyBasket=[...basket];
+            copyBasket.push(item);
+            setBasket(copyBasket)
         }
 
         
 
     const cards = shopItems.map((shopItemsObj, i) => {
         return(
-            <ShoppingList handleItemSelected={handleItemSelected} key={i}
+            <ShoppingList addItemToBasket={addItemToBasket} handleItemSelected={handleItemSelected} key={i}
             item={shopItemsObj}
             // price={shopItemsObj.price}
             // section={shopItemsObj.section} 

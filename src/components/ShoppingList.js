@@ -1,10 +1,11 @@
 import React from "react";
 import Item from "./Item";
 
-const ShoppingList = ({item, handleItemSelected}) => {
+const ShoppingList = ({item, handleItemSelected, addItemToBasket}) => {
     return (
         <>
-        <Item handleItemSelected={handleItemSelected} item={item}/>
+
+        <Item addItemToBasket={addItemToBasket} handleItemSelected={handleItemSelected} item={item}/>
         </>
     )
 }
