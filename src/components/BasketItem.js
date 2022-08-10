@@ -1,23 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
-const Item = ({item, handleItemSelected, addItemToBasket}) => {
+const BasketItem = ({item}) => {
 
-    const handleClick = () => {
-        // handleItemSelected(event.target.value);
-        handleItemSelected(item)
-        console.log("Bob");
-    }
     
     return (
         <Wrapper>
-            <Details onClick={handleClick}>
+            <Details>
                 
                 <p>Name: {item.name}</p>
                 <p>Price: £{item.price}</p>
                 <p>Section: {item.section}</p>
             </Details>
-            <button onClick={()=> addItemToBasket(item)} >Add to Basket</button>
+
         </Wrapper>
     )
 }
@@ -67,4 +62,4 @@ const UserName = styled.div`
 `;
 
 
-export default Item
+export default BasketItem
